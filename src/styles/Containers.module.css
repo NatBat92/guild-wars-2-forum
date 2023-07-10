@@ -1,0 +1,152 @@
+.InnerContainer {
+    width: 80%;
+}
+
+.RoundedBorder {
+    border: 20px;
+}
+
+.ContainerBlackBorder {
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 5px;
+    background-color: black;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.ContainerYellowBorder {
+    border-style: solid;
+    border-width: 10px;
+    border-color: #FFFC00;
+    border-radius: 20px;
+    background-color: rgb(14, 13, 13);
+}
+
+.ContentToneBorder {
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 20px;
+    background-color: rgb(15, 15, 15);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.PostContainer {
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 20px;
+    background-color: #F9F9F9;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin-bottom: 10vh;
+}
+
+.ImageContainer {
+    padding: 5px;
+    max-height: 300px;
+    min-height: 200px;
+    max-width: 300px;
+    object-fit: cover;
+}
+
+.Padding {
+    width: 40px;
+}
+
+.Posts {
+    margin-bottom: 10vh;
+    white-space: normal;
+}
+
+.Padding div {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.SmallComponent {
+    width: 40vw;
+}
+
+.SingleComponent {
+    width: 60vw;
+    max-width: 800px;
+}
+
+.FlexHeight {
+    height: 72vh;
+}
+
+.FixedHeight {
+    height: 80vh;
+    overflow: scroll;
+    white-space: nowrap;
+}
+
+.SideContainer {
+    display: flex;
+    height: 50vh;
+    overflow: scroll;
+    white-space: nowrap;
+    border-width: 5px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.WrapText {
+    width: 100%;
+    overflow-wrap: break-word;
+    background-color: #EBE83D;
+}
+
+.ContainerWhiteThinBorder {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    background-color: rgb(15, 15, 15);
+    max-width: 50%;
+    margin-bottom: 3vh;
+}
+
+/*Tablet*/
+@media screen and (max-width: 992px) {
+    .SideContainer {
+        /* max-height: 17vh; */
+        height: 140px;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-bottom: 20px;
+    }
+}
+
+/*Mobile sizing*/
+@media screen and (max-width: 768px) {
+    .Padding {
+        padding-top: 5px;
+    }
+
+    .Padding div {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .ContainerWhiteThinBorder {
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 20px;
+        background-color: rgb(17, 17, 17);
+        max-width: 90%;
+        margin: 20px;
+    }
+
+    .SmallComponent {
+        width: 100%;
+    }
+
+    .SingleComponent {
+        width: 90%;
+    }
+
+    .FlexHeight {
+        height: 80vh;
+    }
+
+
+}
