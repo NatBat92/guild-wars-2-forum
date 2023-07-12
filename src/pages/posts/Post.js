@@ -1,12 +1,7 @@
 import React from "react";
 import styles from "../../styles/Post.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-
-import Card from "react-bootstrap/Card";
-import Media from "react-bootstrap/Media";
-import OverlayTrigger from "react-bootstrap/OverlayTrigger";
-import Tooltip from "react-bootstrap/Tooltip";
-
+import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
@@ -21,6 +16,7 @@ const Post = (props) => {
     comments_count,
     likes_count,
     like_id,
+    favourite_id,
     title,
     content,
     image,
@@ -42,7 +38,7 @@ const Post = (props) => {
       await axiosRes.delete(`/posts/${id}/`);
       history.goBack();
     } catch (err) {
-      // console.log(err);
+      console.log(err);
     }
   };
 
@@ -58,7 +54,7 @@ const Post = (props) => {
         }),
       }));
     } catch (err) {
-      // console.log(err);
+      console.log(err);
     }
   };
 
@@ -74,7 +70,47 @@ const Post = (props) => {
         }),
       }));
     } catch (err) {
-      // console.log(err);
+      console.log(err);
+    }
+  };
+
+  const handleFavourite = async () => {
+    try {
+      const { data } = await axiosRes.post("/favourites/", {
+        post: id,
+      });
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? {
+              ...post,
+              favourite_id: data.id,
+            }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleRemoveFavourite = async () => {
+    try {
+      await axiosRes.delete(`/favourites/${favourite_id}/`);
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? {
+              ...post,
+              favourite_id: null,
+            }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
     }
   };
 
@@ -107,7 +143,7 @@ const Post = (props) => {
           {is_owner ? (
             <OverlayTrigger
               placement="top"
-              overlay={<Tooltip>You can't like your own post!</Tooltip>}
+              overlay={<Tooltip>You can not like your own post!</Tooltip>}
             >
               <i className="far fa-heart" />
             </OverlayTrigger>
@@ -133,8 +169,39 @@ const Post = (props) => {
           </Link>
           {comments_count}
         </div>
+        {is_owner ? (
+          <>
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>You can not favourite your own post</Tooltip>}
+            >
+              <i className={`fa-regular fa-star ${styles.FavouriteIcon}`} />
+            </OverlayTrigger>
+          </>
+        ) : favourite_id ? (
+          <>
+            <span onClick={handleRemoveFavourite}>
+              <i className={`fa-solid fa-star ${styles.FavouriteIcon}`} />
+            </span>
+          </>
+        ) : currentUser ? (
+          <>
+            <span onClick={handleFavourite}>
+              <i className={`fa-regular fa-star ${styles.FavouriteIcon}`} />
+            </span>
+          </>
+        ) : (
+          <>
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Log in to favourite posts</Tooltip>}
+            >
+              <i className={`fa-regular fa-star ${styles.FavouriteIcon}`} />
+            </OverlayTrigger>
+          </>
+        )}
       </Card.Body>
-    </Card>
+    </Card >
   );
 };
 

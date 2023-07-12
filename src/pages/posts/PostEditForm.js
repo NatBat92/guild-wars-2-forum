@@ -15,7 +15,7 @@ import btnStyles from "../../styles/Button.module.css";
 import { useHistory, useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 
-function PostEditForm() {
+const PostEditForm = () => {
   const [errors, setErrors] = useState({});
 
   const [postData, setPostData] = useState({
@@ -37,7 +37,7 @@ function PostEditForm() {
 
         is_owner ? setPostData({ title, content, image }) : history.push("/");
       } catch (err) {
-        // console.log(err);
+        console.log(err);
       }
     };
 
@@ -76,7 +76,7 @@ function PostEditForm() {
       await axiosReq.put(`/posts/${id}/`, formData);
       history.push(`/posts/${id}`);
     } catch (err) {
-      // console.log(err);
+      console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }
