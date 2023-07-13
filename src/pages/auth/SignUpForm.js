@@ -1,10 +1,19 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import frame from "../../styles/Containers.module.css";
+
 import styles from "../../styles/SignInUpForm.module.css";
-import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
-import { Form, Button, Row, Container, Alert } from "react-bootstrap";
+import appStyles from "../../App.module.css";
+
+import {
+  Form,
+  Button,
+  Image,
+  Col,
+  Row,
+  Container,
+  Alert,
+} from "react-bootstrap";
 import axios from "axios";
 import { useRedirect } from "../../hooks/useRedirect";
 
@@ -39,22 +48,18 @@ const SignUpForm = () => {
   };
 
   return (
-    <Row>
-      {/*spacing container*/}
-      <Container className={frame.SmallComponent}>
-        <Container
-          className={`${frame.ContentToneBorder} ${frame.Shadow}container-md`}
-        >
-          <h4 className={`${appStyles.ComicText} text-center text-uppercase`}>
-            Do you love Video Games? sign up now!!
-          </h4>
+    <Row className={styles.Row}>
+      <Col className="my-auto py-2 p-md-2" md={6}>
+        <Container className={`${appStyles.Content} p-4 `}>
+          <h1 className={styles.Header}>sign up</h1>
 
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="username">
-              <Form.Label className="d-none">Name</Form.Label>
+              <Form.Label className="d-none">username</Form.Label>
               <Form.Control
+                className={styles.Input}
                 type="text"
-                placeholder="Gamer Name"
+                placeholder="Username"
                 name="username"
                 value={username}
                 onChange={handleChange}
@@ -69,6 +74,7 @@ const SignUpForm = () => {
             <Form.Group controlId="password1">
               <Form.Label className="d-none">Password</Form.Label>
               <Form.Control
+                className={styles.Input}
                 type="password"
                 placeholder="Password"
                 name="password1"
@@ -76,7 +82,6 @@ const SignUpForm = () => {
                 onChange={handleChange}
               />
             </Form.Group>
-
             {errors.password1?.map((message, idx) => (
               <Alert key={idx} variant="warning">
                 {message}
@@ -84,8 +89,9 @@ const SignUpForm = () => {
             ))}
 
             <Form.Group controlId="password2">
-              <Form.Label className="d-none">Confirm Password</Form.Label>
+              <Form.Label className="d-none">Confirm password</Form.Label>
               <Form.Control
+                className={styles.Input}
                 type="password"
                 placeholder="Confirm password"
                 name="password2"
@@ -93,36 +99,41 @@ const SignUpForm = () => {
                 onChange={handleChange}
               />
             </Form.Group>
-
             {errors.password2?.map((message, idx) => (
               <Alert key={idx} variant="warning">
                 {message}
               </Alert>
             ))}
-            <Row className="justify-content-center">
-              <Button
-                className={`${appStyles.InfoText} ${btnStyles.ButtonYellow} ${btnStyles.Medium} text-uppercase`}
-                variant="primary"
-                type="submit"
-              >
-                Sign up
-              </Button>
 
-              {errors.non_field_errors?.map((message, idx) => (
-                <Alert key={idx} variant="warning" className="mt-3">
-                  {message}
-                </Alert>
-              ))}
-            </Row>
+            <Button
+              className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
+              type="submit"
+            >
+              Sign up
+            </Button>
+            {errors.non_field_errors?.map((message, idx) => (
+              <Alert key={idx} variant="warning" className="mt-3">
+                {message}
+              </Alert>
+            ))}
           </Form>
-
-          <Container className={`mt-3 ${appStyles.Content}`}>
-            <Link className={styles.Link} to="/signin">
-              Already a member? <span>Sign in here!</span>
-            </Link>
-          </Container>
         </Container>
-      </Container>
+
+        <Container className={`mt-3 ${appStyles.Content}`}>
+          <Link className={styles.Link} to="/signin">
+            Already have an account? <span>Sign in</span>
+          </Link>
+        </Container>
+      </Col>
+      <Col
+        md={6}
+        className={`my-auto d-none d-md-block p-2 ${styles.SignUpCol}`}
+      >
+        <Image
+          className={`${appStyles.FillerImage}`}
+          src={"https://codeinstitute.s3.amazonaws.com/AdvancedReact/hero2.jpg"}
+        />
+      </Col>
     </Row>
   );
 };
