@@ -1,13 +1,19 @@
 .NavBar {
-  background-color:#960b00;
+  background-color:#16329a;
   position: absolute;
   padding: 0;
+  
 }
 
 .NavLink {
   padding: 5px;
+  color: aqua;
+}
+
+.NavLink:hover {
+  color: aqua;
 }
 
 .Active i {
-  color: #44b318;
+  color: rgb(249, 249, 46);
 }

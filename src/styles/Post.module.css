@@ -1,6 +1,6 @@
 .Post {
-    background-color: #ffffff;
-    border: 1px solid #dadadf;
+    background-color: #16329a;
+    border: 3px solid #ffff;
     border-radius: 2px;
     margin-bottom: 16px;
     text-align: center;
@@ -12,13 +12,13 @@
   }
   
   .Heart {
-    color: #f85032;
+    color: white;
   }
   
   .Heart:hover {
-    color: #2142b2;
+    color: rgb(249, 249, 46);
   }
   
   .HeartOutline:hover {
-    color: #f85032;
+    color: rgb(249, 249, 46);
   }
