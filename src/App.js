@@ -6,7 +6,9 @@ import "./api/axiosDefaults";
 import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
 import PostCreateForm from "./pages/posts/PostCreateForm";
+import PopularProfiles from "./pages/profiles/PopularProfiles";
 import PostPage from "./pages/posts/PostPage";
+import LandingPage from "./pages/LandingPage";
 import PostsPage from "./pages/posts/PostsPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import PostEditForm from "./pages/posts/PostEditForm";
@@ -15,8 +17,9 @@ import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import NotFound from "./components/NotFound";
+// import ContactCreateForm from "./pages/contacts/ContactCreateForm";
 
-function App() {
+const App = () => {
   const currentUser = useCurrentUser();
   const profile_id = currentUser?.profile_id || "";
 
@@ -25,11 +28,12 @@ function App() {
       <NavBar />
       <Container className={styles.Main}>
         <Switch>
+        <Route exact path="/" render={() => <LandingPage />} />
           <Route
             exact
             path="/"
             render={() => (
-              <PostsPage message="No results found. Adjust the search keyword." />
+              <PostsPage message="No results found. Please try your search again." />
             )}
           />
           <Route
@@ -37,18 +41,19 @@ function App() {
             path="/feed"
             render={() => (
               <PostsPage
-                message="No results found. Adjust the search keyword or follow a user."
+                message="No results found. Please try your search again or follow a user."
                 filter={`owner__followed__owner__profile=${profile_id}&`}
               />
             )}
           />
           <Route
             exact
-            path="/liked"
+            path="/favourites"
             render={() => (
               <PostsPage
-                message="No results found. Adjust the search keyword or like a post."
-                filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
+                message="No results found. Did you favourite any posts?"
+                // need to check the filter string
+                filter={`favourites__owner__profile=${profile_id}&ordering=-favourites__created_at&`}
               />
             )}
           />
@@ -58,6 +63,7 @@ function App() {
           <Route exact path="/posts/:id" render={() => <PostPage />} />
           <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
+          <Route exact path="/profiles/:id" render={() => <PopularProfiles />} />
           <Route
             exact
             path="/profiles/:id/edit/username"
@@ -73,7 +79,11 @@ function App() {
             path="/profiles/:id/edit"
             render={() => <ProfileEditForm />}
           />
-
+          {/* <Route
+            exact
+            path="/contact/create/"
+            render={() => <ContactCreateForm />}
+          /> */}
           <Route render={() => <NotFound />} />
         </Switch>
       </Container>

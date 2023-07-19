@@ -22,3 +22,15 @@
   .HeartOutline:hover {
     color: rgb(249, 249, 46);
   }
+
+  .FavouriteIcon {
+    color: white;
+  }
+  
+  .FavouriteIcon:hover {
+    color: rgb(249, 249, 46);
+  }
+  
+  .HeartOutline:hover {
+    color: rgb(249, 249, 46);
+  }
