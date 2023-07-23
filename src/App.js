@@ -16,8 +16,9 @@ import ProfilePage from "./pages/profiles/ProfilePage";
 import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
+import ContactForm from './pages/contact/ContactForm';
+import Confirmation from './pages/contact/Confirmation';
 import NotFound from "./components/NotFound";
-// import ContactCreateForm from "./pages/contacts/ContactCreateForm";
 
 const App = () => {
   const currentUser = useCurrentUser();
@@ -52,7 +53,6 @@ const App = () => {
             render={() => (
               <PostsPage
                 message="No results found. Did you favourite any posts?"
-                // need to check the filter string
                 filter={`favourites__owner__profile=${profile_id}&ordering=-favourites__created_at&`}
               />
             )}
@@ -79,11 +79,8 @@ const App = () => {
             path="/profiles/:id/edit"
             render={() => <ProfileEditForm />}
           />
-          {/* <Route
-            exact
-            path="/contact/create/"
-            render={() => <ContactCreateForm />}
-          /> */}
+          <Route exact path="/contact" render={() => <ContactForm />} />
+          <Route exact path="/confirmation" render={() => <Confirmation />} />
           <Route render={() => <NotFound />} />
         </Switch>
       </Container>
