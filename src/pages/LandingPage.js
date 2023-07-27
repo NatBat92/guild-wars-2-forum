@@ -19,7 +19,7 @@ const LandingPage = () => {
           >
             <Row className="justify-content-center">
               <div>
-                <img src={background} alt="background-landing" />
+                <img className={styles.LandingImage} src={background} alt="background-landing" />
               </div>
             </Row>
             <Row className="justify-content-center">
