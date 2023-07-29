@@ -1,8 +1,8 @@
 # Guild Wars 2 Forum
 
-Guild Wars Forum is a forum/ review app for enthusiasts of the guildwars franchise. The main goal of this app is to encourage players to talk about their favourite/ least favourite things in the game, show off their gear or share thoughts on up coming content.
+The Guild Wars 2 Forum is a discussion space to review, share knowledge and discuss for enthusiasts of the Guild Wars franchise. The main goal of this app is to encourage players to talk about their favourite/least favourite things in the game, show off their gear or share thoughts on up coming content.
 
-A community can be created in the future with the possibility of creating and finding a guild for you to play the game with.
+A community can be created in the future, with the possibility of creating and finding a Guild for you to join while playing the game.
 
 ![Image showing the website's responsiveness on different screens](src/assets/readme/am-i-reponsive-image.png)
 
@@ -18,57 +18,57 @@ A community can be created in the future with the possibility of creating and fi
 
 ## UX Design and Planning
 
-During the planning of this project, I considered which features and functionality should be available to the user, and how to provide these whilst maximising the user experience.
+During the planning of this project, I considered what features and functionality should be available to the user, and how to provide these whilst maximising the user experience.
 
 ## Project Goals
 
-A react frontend website and django backend API. Linked together to provide full CRUD functionality. 
+A React front-end website and Django back-end API, linked together to provide full CRUD functionality. 
 
-A site that is accessed via login and provides users with the features of creating posts and comments and editing their profile. 
+A site that is accessed via a log in page and provides users with the features of creating posts and comments, editing their profile, favouriting posts and following other users. 
 
 ### The factors in setting these goals:
 
-- Entry level knowledge and understanding of creating a React frontend and API backend.
+- Entry level knowledge and understanding of creating a React front-end and API back-end.
 
 ### Project goals:
 
 |No.|Goal|Description|
 |---|---|---|
-|1| Log in/log out/Sign up | User can create an account and login or log out|
+|1| Log in/Log out/Sign up | User can create an account and log in or log out|
 |2| Posts page styled with Guild Wars theme | A responsive homepage with post CRUD functionality|
 |3| Comments | Comments for each post with CRUD functionality|
-|4| Profiles (Created on new account) | Profiles with full CRUD Functionality |
-|5| Front-end react website and custom built API| Hosted on Heroku |
+|4| Profiles (Created on new account) | Profiles with full CRUD functionality |
+|5| Front-end React website and custom built API| Hosted on Heroku |
 |6| Deployment of final website to Heroku | Upon project completion | 
 |7| Document all known bugs and issues | Ensure documentation is clear and honest |
 
 ## User Stories
 
-An agile development strategy was implemented in this project as user stories were created as 'Issues' on GitHub. Each user story was listed and check boxes were used on ones which required multiple steps. Each time a task was complete i would tick the box until all steps were ticked off and i could resolve the issue. 
+An agile development strategy was implemented in this project as user stories were created as 'Issues' on GitHub. Each user story was listed and check boxes were utilised to document tasks that required multiple steps. Each time a task was complete, I would tick the box until all steps were completed and I could resolve the issue. 
 
 ### Setup
 
-1. As a **user** I can **view a navbar on each page** so that **I can use the links to change my current page**.
-2. As a **user** I can **navigate through pages quickly** so that **I can view content seamlessly without page refresh**.
-3. As a **user** I can **tell if I am logged in or not so that I can log in if I need to**.
-4. As a **user** I can **maintain logged in until I choose to log out so that I don’t have to log in all-time**.
-5. As a **user** I can **create a list of my favourites posts**.
+1. As a **user**, I can **view a navbar on each page** so that **I can use the links to change my current page**.
+2. As a **user**, I can **navigate through pages quickly** so that **I can view content seamlessly without page refresh**.
+3. As a **user**, I can **tell if I am logged in or not so that I can log in if I need to**.
+4. As a **user**, I can **remain logged in until I choose to log out so that I don’t have to log in all-time**.
+5. As a **user**, I can **create a list of my favourites posts**.
 
 ### Posts
 
-1. As a **logged in user** I can **create posts**.
-2. As a **user** I can **delete my posts**.
-3. As a **user** I can **edit my posts title and description**.
-4. As a **user** I can **view the details of a single post so that I can learn more about it**.
-5. As a **user** I can **view all the most recent posts, ordered by most recently created first so that I am up to date with the newest content**.
-6. As a **user** I can **search for posts and categories so that I can find specific themes**.
-7. As a **user** I can **view all the posts by a specific user so that I can catch up on their latest posts, or decide I want to follow them**
-8. As a **user** I can **view the details of a single post so that I can learn more about it**
+1. As a **logged in user**, I can **create posts**.
+2. As a **logged in user**, I can **delete my posts**.
+3. As a **logged in user**, I can **edit my posts title and description**.
+4. As a **logged in user**, I can **view the details of a single post so that I can learn more about it**.
+5. As a **logged in user**, I can **view all the most recent posts, ordered by most recently created first so that I am up to date with the newest content**.
+6. As a **logged in user**, I can **search for posts and categories so that I can find specific themes**.
+7. As a **logged in user**, I can **view all the posts by a specific user so that I can catch up on their latest posts, or decide I want to follow them**.
+8. As a **logged in user** I can **view the details of a single post so that I can learn more about it**.
 
 ### Comments
 
 1. As a **logged in user**, I can **create a comment on a post** so that **I can share my opinion**.
-2. As a **user**, I can **view comments on a post** so that **I can read other users’ opinions**.
+2. As a **logged in user**, I can **view comments on a post** so that **I can read other users’ opinions**.
 3. As a **comment author**, I can **edit my comment**.
 4. As a **comment author** I can **delete my comments**.
 
@@ -80,18 +80,18 @@ An agile development strategy was implemented in this project as user stories we
 
 ### Profile
 
-1. As a **user** I can **sign in to the app so that I can access functionality for logged in users**.
-2. As a **logged in user** I can **update my username and password so that I can change my display name and keep my profile secure**.
-3. As a **user** I can **see all my uploaded posts**.
-4. As a **logged in user** I can **view content filtered by users I follow so that I can keep up to date with what they are posting about**.
-5. As a **user** I can **view user's avatars so that I can easily identify users of the application**.
-6. As a **user** I can **follow and unfollow other people**.
-7. As a **user** I can **view statistics about a specific user: bio, number of posts, follows and users followed**.
-8. As a **user** I can **see a list of the most followed profiles so that I can see which profiles are popular**.
+1. As a **user**, I can **sign in to the app so that I can access functionality for logged in users**.
+2. As a **logged in user**, I can **update my username and password so that I can change my display name and keep my profile secure**.
+3. As a **logged in user**, I can **see all my uploaded posts**.
+4. As a **logged in user**, I can **view content filtered by users I follow so that I can keep up to date with what they are posting about**.
+5. As a **logged in user**, I can **view user's avatars so that I can easily identify users of the application**.
+6. As a **logged in user**, I can **follow and unfollow other people**.
+7. As a **logged in user**, I can **view statistics about a specific user: bio, number of posts, follows and users followed**.
+8. As a **logged in user**, I can **see a list of the most followed profiles so that I can see which profiles are popular**.
 
 ### Contact Us
 
-1. As a **user** I can **sign in to the app and send a message to the admin to report posts/ comments**.
+1. As a **user**, I can **sign in to the app and send a message to the admin to report posts/comments**.
 
 ## Features
 
@@ -99,9 +99,9 @@ An agile development strategy was implemented in this project as user stories we
 
 ![landing page](src/assets/readme/landing-page.jpg)
 
-- Styled to give the feel of a video gamer database login
+- Styled to give the feel of a video gamer database login.
 
-- user can only login from this screen
+- User can only login from this screen.
 
 ### Navigation 
 
@@ -109,7 +109,7 @@ An agile development strategy was implemented in this project as user stories we
 
 ![logo](src/assets/readme/nav-bar-logo.jpg)
 
-- A royal blue background color and white font color provides sufficient contrast so the links are clearly visible.
+- A royal blue background color and white font color provides sufficient contrast so the links are clearly visible and readable.
 
 - A purple hover effect also provides sufficient contrast and improves the user experience by showing that the links are clickable. 
 
@@ -123,11 +123,11 @@ An agile development strategy was implemented in this project as user stories we
 
 - Allows the user to navigate between pages on the website.
 
-- On smaller screens, a hamburger icon appears and opens a dropdown menu when clicked, displaying all of the navbar links. This provides a better user experience as the navbar doesn't have to take up unnecessary space and it maximises the space for other content.
+- On smaller screens, a hamburger icon appears and opens a dropdown menu when clicked, displaying all of the navbar links. This provides a better user experience as the navbar doesn't take up unnecessary space and it maximises the space for other content.
 
 ![burger](src/assets/readme/burger-image.jpg)
 
-- On smaller screens, the navbar automatically closes after clicking a nav link or clicking off of the nav bar to provide a better users experience.
+- On smaller screens, the navbar automatically closes after clicking a nav link or clicking off of the nav bar to provide a better user experience.
 
 - Conditional rendering is used to display different nav links to users that are logged in and logged out. This limits users to being able to only use site functionality relevant to their log in status.
 
@@ -135,8 +135,6 @@ An agile development strategy was implemented in this project as user stories we
 ![loggedin](src/assets/readme/nav-bar-logged-in.jpg)
 
 - Users are able to see their log in avatar in the navbar.
-
-![profile]
 
 ### Sign Up
 
@@ -172,13 +170,13 @@ An agile development strategy was implemented in this project as user stories we
 
 - Controls section at the top of the page includes a search bar, favourites, contact us and add post button. These are above the posts so that the user is instantly aware that they can manipulate the page content.
 
-- Search bar allows users to search for posts on the website by title or user's name. 
+- The Search bar allows users to search for posts on the website by title or username. 
 
-- Add Post button allows users to be redirected to the 'Create Post' page, where they can add their own post to the website. The button only appears if the current user is logged in.
+- The 'Add Post' button allows users to be redirected to the 'Create Post' page, where they can add their own post to the website. The button only appears if the current user is logged in.
 
-- Each post clearly shows information such as the author, date created, title and description and image. Clicking on the post image will redirect users to the 'Post' page, where they can find more details. Clicking on the profile image will redirect users to the author's 'Profile' page
+- Each post clearly shows information such as the author, date created, title and description and image. Clicking on the post image will redirect users to the 'Post' page, where they can find more details. Clicking on the profile image will redirect users to the author's 'Profile' page.
 
-- Display the most followed profiles with the possibilty to follow/unfollow a profile.
+- Displays the most followed profiles with the possibilty to follow/unfollow a profile.
 
 ![home screen](src/assets/readme/home-page.jpg)
 
@@ -208,9 +206,9 @@ An agile development strategy was implemented in this project as user stories we
 
 - Infinite scrolling is present for posts that have more than 10 comments.
 
-- If ther current user is the author of the post, a more options dropdown button will appear as three dots. When clicked, the user can select the pencil button to be redirected to the 'Edit Post' page, or the bin to delete the post.
+- If the current user is the author of the post, a more options dropdown button will appear as three dots. When clicked, the user can select the pencil button to be redirected to the 'Edit Post' page, or the bin icon to delete the post.
 
-- If ther current user is the author of the comment, a more options dropdown button will appear as three dots. When clicked, the user can select the pencil button to load the 'Edit Comment' form, or the bin to delete the comment.
+- If the current user is the author of the comment, a more options dropdown button will appear as three dots. When clicked, the user can select the pencil button to load the 'Edit Comment' form, or the bin icon to delete the comment.
 
 ![comment](src/assets/readme/comment-section.jpg)
 
@@ -222,15 +220,15 @@ An agile development strategy was implemented in this project as user stories we
 
 ![profile view](src/assets/readme/profile-page.jpg)
 
-- Find the posts created by the user
+- Find the posts created by the user.
 
-- See the number of posts
+- See the number of posts.
 
-- See the number of followers
+- See the number of followers.
 
-- See the number of following
+- See the number of following.
 
-- Owner can choose to edit, change username and change password
+- Owner can choose to edit, change username and change password.
 
 ![profile options](src/assets/readme/profile-edit-options.jpg)
 
@@ -248,7 +246,7 @@ An agile development strategy was implemented in this project as user stories we
 
 - A user can contact the admin
 
-![contact](/src/assets/readmefiles/contact.png)
+![contact](src/assets/readme/contact-us.png)
 
 ### Add Post
 
@@ -258,7 +256,7 @@ An agile development strategy was implemented in this project as user stories we
 
 ![add post](src/assets/readme/add-post.jpg)
 
-- Users must input a title, image and content before submitting a post. Validation is used to check that fields are not left blank and users receive an alert message to explain the error if they try to submit the form with a blank field. 
+- Users must input a title, image and content before submitting a post. Validation is used to check that fields are not left blank, users receive an alert message to explain the error if they try to submit the form with a blank field. 
 
 - Placeholder text is used to inform the user of the information required for each field.
 
@@ -280,7 +278,7 @@ An agile development strategy was implemented in this project as user stories we
 
 ![edit post form](src/assets/readme/edit-post-page.jpg)
 
-- Accessed by clicking on the 'MoreDropdown' link on the 'Post' page. Can only be accessed if the current user is the author of the post to ensure that users cannot edit the content of other users' posts.
+- Accessed by clicking on the 'MoreDropdown' link on the 'Post' page. This can only be accessed if the current user is the author of the post, this ensures that users cannot edit the content of other users' posts.
 
 - The form loads pre-filled with the existing post data, making it easy for the user to edit the information accordingly.
 
@@ -296,13 +294,13 @@ An agile development strategy was implemented in this project as user stories we
 
 ## React Components
 
-React components are blocks of code that are reusable throughout an application. Rather than categorising each page as a whole, each page can be broken down into parts, known as components. They are advantageous as they reduce the need for writing the same code multiple times for different pages. Large pages can often be quite complex, so working on a particular part (component) of a page independently can reduce complexity and the opportunity for making errors. Additionally, an error caused in a particular component will be isolated to itself so won't impact the whole site's functionality. Finally, components were used to easily provide a consistent and familiar theme and user experience across the website
+React components are blocks of code that are reusable throughout an application. Rather than categorising each page as a whole, each page can be broken down into parts, known as components. They are advantageous as they reduce the need for writing the same code multiple times for different pages. Large pages can often be quite complex, so working on a particular part (component) of a page independently can reduce complexity and the opportunity for making errors. Additionally, an error caused in a particular component will be isolated to itself so won't impact the whole site's functionality. Finally, components were used to easily provide a consistent and familiar theme and user experience across the website.
 
 ### Avatar
 
 - Used to display user profile images, such as on posts, comments, profiles and the navbar.
 
-- User experience improved as it allows consistent and familiar styling to be used throughout the application. It also allows users to be creative and feel unique with their profile.
+- User experience improved as it allows consistent and familiar styling to be used throughout the application. It also allows users to be creative and feel that their profile is unique.
 
 ### MoreDropdown
 
@@ -312,11 +310,11 @@ React components are blocks of code that are reusable throughout an application.
 
 - ProfileDropdown variation allows the profile owner to edit their profile or change their username and password.
 
-- Also improves the user experience by allowing supplementary content to be hidden from the main content. Thus, not keeping the laout simple and not overwhelming for the user.
+- Also improves the user experience by allowing supplementary content to be hidden from the main content. Thus, keeping the layout simple and not overwhelming for the user.
 
 ### NavBar
 
-- Used on every page to allow users to access different pages on the website.
+- Used on every page to allow users to navigate to different pages on the website.
 
 - Forms a consistent part of the layout on every page to contribute to the website's identity.
 
@@ -326,17 +324,17 @@ React components are blocks of code that are reusable throughout an application.
 
 - Used to notify the user that the current URL path returns no content.
 
-- Improves the user experience by providing feedback after an error, rather than leaving them to become confused.
+- Improves the user experience by providing feedback after an error, rather than showing a blank page with no context.
 
 ![edit image](src/assets/readme/page-not-found.jpg)
 
 ## Future Features
 
-- Create a rating system to the posts.
+- Create a rating system for the posts, this will allow users to rate posts from 1 to 5, allowing other users to be able to filter on the rating of the posts.
 
-- Create the option for someone to reply to someone else's comment
+- Create the option for other users to reply to another users comment.
 
-- add email validation to profiles to make them more secure
+- Add email validation to the profiles to make the user accounts more secure.
 
 ## Manual Testing
 
@@ -347,7 +345,7 @@ React components are blocks of code that are reusable throughout an application.
 | 001 | Navbar can be seen on every page of the website. | Navbar is present at the top of every page. | Pass |
 | 002 | Navbar links are accurate and load the correct pages. | Navlinks accurately redirect users to the correct page. No broken links. | Pass |
 | 003| Clicking a navbar link should redirect users quickly, without unnecessary page reloads. | Navigation between pages is quick. No unnecessary page reloads, only changing components are re-rendered. | Pass |
-| 004 | Users can see their login status in the navbar. | Users are able to see their login status by seeing either the profile image and sign out navlinks when logged in, and the sign up and sign in navlinks when logged out. | Pass |
+| 004 | Users can see their log in status in the navbar. | Users are able to see their log in status by seeing either the profile image and sign out navlinks when logged in, and the sign up and sign in navlinks when logged out. | Pass |
 | 005 | User has access to different links in the navbar depending on log in status. | Conditional rendering successfully makes the 'Favourites', 'Contact Us', 'Profile', and 'Sign Out' links visible for logged in users, whereas only logged out users have the 'Sign Up' and 'Sign In' links visible. | Pass |
 
 ### Authentication
@@ -355,15 +353,15 @@ React components are blocks of code that are reusable throughout an application.
 | Test Case | Test Description | Test Outcome | Test Result |
 | ----------- | ----------- | ----------- | ----------- |
 | 006 | 'Sign Up' form prevents users from registering for an account when invalid input data is provided. | Validation prevents users registering for an account, for example when the username already exists, passwords don't match and when fields are left blank. | Pass |
-| 007 | Users receive alerts to explain validation errors in the 'Sign Up' form. | Users receive error alert messages underneath the field the error occurs in. | Pass |
+| 007 | Users receive alerts to explain validation errors in the 'Sign Up' form. | Users receive error alert messages underneath the field causing the error. | Pass |
 | 008 | Users are able to sign up for an account. | When users input valid data into the 'Sign Up' form they can successfully register for an account. | Pass |
-| 009 | The 'sign in' link on the 'sign up' page, redirects users to the 'Sign In' page. | Clicking the 'sign in' link successfully redirects users to the 'Sign In' page. | Pass |
+| 009 | The 'Sign in' link on the 'Sign up' page, redirects users to the 'Sign In' page. | Clicking the 'Sign in' link successfully redirects users to the 'Sign In' page. | Pass |
 | 010 | 'Sign In' form prevents users from signing into their account when invalid input data is provided. | Validation prevents users signing into their account, for example when the username or password are incorrect and when fields are left blank. | Pass |
-| 011 | Users receive alerts to explain validation errors in the 'Sign In' form. | Users receive error alert messages underneath the field the error occurs in. | Pass |
+| 011 | Users receive alerts to explain validation errors in the 'Sign In' form. | Users receive error alert messages underneath the field causing the error. | Pass |
 | 012 | Users are able to sign in to their already created account. | When users input valid data into the 'Sign In' form they can successfully log into their account. | Pass |
-| 013 | The 'sign up' link redirects users to the 'Sign Up' page. | Clicking the 'sign up' link successfully redirects users to the 'Sign Up' page. | Pass |
+| 013 | The 'Sign up' link redirects users to the 'Sign Up' page. | Clicking the 'Sign up' link successfully redirects users to the 'Sign Up' page. | Pass |
 | 014 | Users can see their logged in status. | Users can check the navbar to see their log in status | Pass |
-| 015 | Logged out users are unable to access pages exclusive to logged in users (e.g. 'Add Post' page) and are either reidrected to the 'Home' page or see a page not found message. | Logged out users are unable to use logged in user functionality are redirected to the 'Home' page or see a page not found message.  | Pass |
+| 015 | Logged out users are unable to access pages exclusive to logged in users (e.g. 'Add Post' page) and are either redirected to the 'Home' page or see a page not found message. | Logged out users are unable to use logged in user functionality and are redirected to the 'Home' page or see a page not found message.  | Pass |
 | 016 | Logged in users are unable to access the pages exclusive to logged out users (e.g. 'Sign Up' and 'Sign In' pages) | When a logged in user tries to access a URL to a page exclusive to logged out users, they are redirected to the 'Home' page. | Pass |
 | 017 | Users can log out of their account using the 'Sign Out' link in the navbar. | Users can log out and are redirected to the 'Landing' page. | Pass |
 | 018 | When users successfully register for an account, the profile instance is created in the API and has the correct data. | User instance is created and the data is correct. | Pass |
@@ -372,16 +370,16 @@ React components are blocks of code that are reusable throughout an application.
 
 | Test Case | Test Description | Test Outcome | Test Result |
 | ----------- | ----------- | ----------- | ----------- |
-| 019 | The 'Home' page renders a feed of posts if they exist. Most recent posts are seen first. | A feed of posts can be seen if post instances are created. Most recent posts are seen at the top of the feed. | Pass |
+| 019 | The 'Home' page renders a feed of posts if they exist. Most recent posts are shown first. | A feed of posts can be seen if post instances are created. Most recent posts are shown at the top of the feed. | Pass |
 | 020 |The 'Favourites' page renders a feed of posts that the current user has already favourited. | A feed of posts is shown; only including posts that the user has favourited. | Pass |
 | 021 | When no posts exist on the 'Home' or 'Favourites' pages. A message is displayed to inform the user that there are no results. | No results image and message seen on each page when no posts exist. | Pass |
-| 022 | The search bar can be used to filter the posts feed by a post's title. | The search bar returns a feed of posts the where the input matchespost's title. | Pass |
-| 023 | The 'Add Post' button (allowing users to add a post) only renders for logged in users. | Only logged in users can see the 'Post' button. | Pass |
-| 024 | Each post in the feed displays the all the correct information about the post. | Each post includes a title, author name, profile image, date, description, image, comment button, favourite and like button. | Pass |
-| 025 | 'Post' page (showing detail about a particular post) can be accessed by clicking on a particular post's image. | Cliciking on a post's image loads a page containing only the specific post. | Pass |
-| 026 | The 'Post' page shows comments for a post if they exist, or a message if they don't. | Comments can be seen in a feed below the post when they exist. If there are no comments, the user is informed. | Pass |
-| 027 | If the user is logged in, the 'Post' page shows the 'Add Comment' form. | 'Add Comment' visible under the post, only if the user is logged in. | Pass |
-| 028 | Only the author of a post, can access its 'Edit Post' page. |  The post author can access the 'Edit Post' form, whereas other users are redirected to the 'Home' page. | Pass |
+| 022 | The search bar can be used to filter the posts feed by a post's title. | The search bar returns a feed of posts where the input matches the post's title. | Pass |
+| 023 | The 'Add Post' button (allowing users to add a post) only renders for logged in users. | Only logged in users can see the 'Add Post' button. | Pass |
+| 024 | Each post in the feed displays the correct information about the post. | Each post includes a title, author name, profile image, date, description, image, comment button, favourite and like button. | Pass |
+| 025 | 'Post' page (showing detail about a particular post) can be accessed by clicking on a particular post's image. | Clicking on a post's image loads a page containing only the specific post. | Pass |
+| 026 | The 'Post' page shows comments for a post if they exist, or a message if they don't. | Comments can be seen in a feed below the post when they exist. If there are no comments, the user is informed by a message on the screen. | Pass |
+| 027 | If the user is logged in, the 'Post' page shows the 'Add Comment' form. | The 'Add Comment' form is visible under the post, only if the user is logged in. | Pass |
+| 028 | Only the author of a post, can access it's 'Edit Post' page. |  The post author can access the 'Edit Post' form, whereas other users are redirected to the 'Home' page. | Pass |
 | 029 | Logged in users can use the 'Add Post' form to add a new post to the website. | Submitting valid data in the 'Add Post' form will create a post which can be seen in the posts feed. | Pass |
 | 030 | Users cannot create a post if data is invalid in the 'Add Post' form. | 'Add Post' form handles invalid data when a user tries to submit the form (e.g. empty fields) and informs the user of the error as an alert message under the invalid field. | Pass |
 | 031 | Clicking the 'Cancel' button in the 'Create Post' form results in no post being created and the user being returned to the 'Home' page. | No post is created and the user is redirected to the 'Home' page. | Pass |
@@ -400,14 +398,14 @@ React components are blocks of code that are reusable throughout an application.
 | 039 | Logged in users can comment on posts. | Comment form is rendered on the 'Post' page for logged in users and they can successfully create comments. Comment can be seen under the comment form.| Pass | 
 | 040 | Logged out users cannot comment on posts. | No comment form is rendered on the 'Post' page so they cannot make a comment. | Pass | 
 | 041| Users cannot add a comment of empty content. | Submitting an empty comment form doesn't result in a comment being made. | Pass |
-| 042 | When a user comments on a post, the count for comments is increased by 1. | Commenting on a post causes the number beside the button (count) to increase by one. | Pass | 
+| 042 | When a user comments on a post, the count for comments is increased by one. | Commenting on a post causes the number beside the button (count) to increase by one. | Pass | 
 | 043 | When a user successfully creates a comment, a comment instance is created in the API. The post instance has its comments_count updated in the API. | A comment instance is created and the post instance is updated correctly in the API. | Pass |
 | 044 | Authors of a comment, can edit their comment. | Comment authors can see a 'MoreDropdown' icon and click the edit button to render a 'Edit Comment' form. Updating the content and saving the form results in the comment being updated. | Pass |
-| 045 | Users cannot edit a comment they are not the author of. | No 'MoreDropdown' icon is rendered on the comment so they cannot edit its content. | Pass |
+| 045 | Users cannot edit a comment they did not write. | No 'MoreDropdown' icon is rendered on the comment so they cannot edit its content. | Pass |
 | 046 | When a user successfully edits a comment, the comment instance is updated in the API. | A comment instance is created in the API. | Pass | 
-| 047 | Authors of a comment, can delete their comment. | Comment authors can see a 'MoreDropdown' icon and click the delete button to delete the comment. | Pass |
-| 048 | Users cannot delete a comment they are not the author of. | No 'MoreDropdown' icon is rendered on the comment so they cannot delete the comment. | Pass |
-| 049 | When a user deletes a comment on a post, the count for comments is decreased by 1. | Deleting a comment on a post causes the number beside the button (count) to decrease by one. | Pass |
+| 047 | Authors of a comment can delete their comment. | Comment authors can see a 'MoreDropdown' icon and click the delete button to delete the comment. | Pass |
+| 048 | Users cannot delete a comment they did not write. | No 'MoreDropdown' icon is rendered on the comment so they cannot delete the comment. | Pass |
+| 049 | When a user deletes a comment on a post, the count for comments is decreased by one. | Deleting a comment on a post causes the number beside the button (count) to decrease by one. | Pass |
 | 050 | When a user successfully deletes a comment, the comment instance is deleted in the API. The post instance has its comments_count updated in the API. | The comment instance is deleted and the post instance is updated correctly in the API. | Pass |
 
 ### Favourites
@@ -419,7 +417,7 @@ React components are blocks of code that are reusable throughout an application.
 | 053 | When a user successfully favourites a post, the favourite button colour becomes solid. | A solid button colour is shown when the post is set as a favourite. | Pass |
 | 054 | When a user successfully favourites a post, a favourite instance is created in the API. | Instance is created in the API. | Pass |
 | 055 | Users can disable the favourite by clicking the favourite button again. | Clicking the favourite button again removes the favourite. | Pass |
-| 056 | When a user successfully favourites a post, the favourite button colour becomes no longer solid. | Solid button colour disappears when the post is set to no longer be a favourite. | Pass |
+| 056 | When a user successfully removes a favourite from a post, the favourite button colour becomes no longer solid. | Solid button colour disappears when the post is set to no longer be a favourite. | Pass |
 | 057 | When a user successfully removes a favourite on a post, a favourite instance is deleted in the API. | Instance is deleted in the API. | Pass |
 
 ### Likes
@@ -430,17 +428,17 @@ React components are blocks of code that are reusable throughout an application.
 | 059 | Users cannot like their own posts and are informed by an overlay. | Users cannot like their own posts and can notice an overlay message to explain the error when hovering over the like button. | Pass |
 | 060 | When a user successfully like a post, the like button colour becomes solid. | A solid button colour is shown when the post is liked. | Pass |
 | 061 | When a user successfully like a post, the like instance is created in the API. | Instance is created in the API. | Pass |
-| 062 | Users can delete the like by clicking the like button again. | Clicking the like button again removes the favourite. | Pass |
-| 063 | When a user successfully removes a like on a post, a favourite instance is deleted in the API. | Instance is deleted in the API. | Pass |
+| 062 | Users can remove the like by clicking the like button again. | Clicking the like button again removes the favourite. | Pass |
+| 063 | When a user successfully removes a like on a post, a like instance is deleted in the API. | Instance is deleted in the API. | Pass |
 
 ### Profiles 
 
 | Test Case | Test Description | Test Outcome | Test Result |
 | ----------- | ----------- | ----------- | ----------- |
-| 064 | Users can view profiles by clicking on the profile image image or name link on a post. | Clicking on either link redirects the user to the to the profile page. | Pass |
+| 064 | Users can view profiles by clicking on the profile image image or name link on a post. | Clicking on either link redirects the user to the profile page. | Pass |
 | 065 | Logged in users can also access their own profile via the 'Profile' navlink. | Navlink is present and redirects the user correctly. | Pass |
 | 066 | Profile page renders an information section (e.g. profile image, title, description), statistics (posts, followers, following) section and posts feed. | Profile page renders information, statistics and feed sections. | Pass |
-| 067 | The statistics section shows the correct information. | Statistics accurately show the number of posts, followers and following by a user. | Pass |
+| 067 | The statistics section shows the correct information. | Statistics accurately show the number of posts, followers and the number of users they are following. | Pass |
 | 068 | If a user creates a post or deletes a post and then returns to their profile, the post count updates correctly. | Creating a post increases the post count, and deleting a post decreases the post count. | Pass |
 | 069 | The 'ProfileDropdown' icon (providing links to 'Edit Profile', 'Change Username' and 'Change Password') is only present for users visiting their own profile. | 'ProfileDropdown' icon visible on a user's own profile but not when visiting a different user's profile. | Pass |
 | 070 | 'Edit Profile' form loads pre-filled with existing profile data. | The current profile data can be seen when loading the 'Edit Profile' form. | Pass |
@@ -474,7 +472,7 @@ React components are blocks of code that are reusable throughout an application.
 
 ### Lighthouse Scores
 
-The site scored fine. Performance different a lot using live site vs incognito vs normal vs dev deployment.
+The site scored well, performance differs dramatically using the live site vs incognito mode, and vs normal and vs dev deployment.
 
 - Landing Page
 
@@ -516,7 +514,7 @@ Site was tested using the following desktops:
 
 ### Remaining Bugs
 
-- Bug on IOS and android mobile devices, turn off ‘prevent cross site tracking’ in iOS/ samsung internet settings is the only way to make the website works on iphones/iPads/ android devices.
+- Bug identified on iOS and Android mobile devices: Turn off ‘prevent cross site tracking’ within the Safari and Samsung Internet browser settings is required to ensure the website is visible and works correctly on iOS and Android devices.
 
 ## Technologies Used
 
@@ -560,41 +558,41 @@ Note that the API will also have to configured to allow access to local hosts.
 
 - Manually Downloading the Repository:
 
-    - Opening the project repository at: https://github.com/NatBat92/guild-wars-2-forum
+    - Open the project repository at: https://github.com/NatBat92/guild-wars-2-forum
 
-    - Opening the dropdown on the 'code' button.
+    - Open the dropdown on the 'code' button.
 
-    - Downloading the zip file.
+    - Download the zip file.
 
-    - Extracting the files from the zip file into a new folder on your computer.
+    - Extract the files from the zip file into a new folder on your computer.
 
-    - Opening the folder in an IDE of your choice.
+    - Open the folder in an IDE of your choice.
 
-    - Updating the the "start" script value to "react-scripts --openssl-legacy-provider start".
+    - Update the the "start" script value to "react-scripts --openssl-legacy-provider start".
 
-    - running "npm install" in the terminal.
+    - Run "npm install" in the terminal.
 
-    - running "npm start" in the terminal.
+    - Run "npm start" in the terminal.
 
 - Cloning the Repository:
 
-    - Opening the project repository at: https://github.com/NatBat92/guild-wars-2-forum
+    - Open the project repository at: https://github.com/NatBat92/guild-wars-2-forum
 
-    - Opening the dropdown on the 'code' button.
+    - Open the dropdown on the 'code' button.
 
-    - Copying the link under the HTTPS heading (https://github.com/NatBat92/guild-wars-2-forum.git).
+    - Copy the link under the HTTPS heading (https://github.com/NatBat92/guild-wars-2-forum.git).
 
-    - Opening an IDE of your choice (must have Git support or relevant git extension).
+    - Open an IDE of your choice (must have Git support or relevant git extension).
 
     - Open the terminal and create a directory to store the repository.
 
     - Type "git clone https://github.com/NatBat92/guild-wars-2-forum.git" and press enter in the terminal.
 
-    - Updating the the "start" script value to "react-scripts --openssl-legacy-provider start".
+    - Update the the "start" script value to "react-scripts --openssl-legacy-provider start".
 
-    - running "npm install" in the terminal.
+    - Run "npm install" in the terminal.
 
-    - running "npm start" in the terminal.
+    - Run "npm start" in the terminal.
  
 ### Deploying to Heroku
 
@@ -622,12 +620,12 @@ This project was deployed to Heroku by:
 
 ### Connecting to the API
 
-In axiosDefaults.js, the "axios.defaults.baseURL" variable needs to be set to the string 'https://gw2-forum-3bb633979161.herokuapp.com/' (deployed API URL). This sets the front end website to make requests to the specifc API built in this project. Additionally, the backend API project on Heroku needs a config var of "Client_ORIGIN" and the value of "https://gw2-forum-3bb633979161.herokuapp.com/" (deployed site URL). This allows the front end website to make requests to the API.
+In axiosDefaults.js, the "axios.defaults.baseURL" variable needs to be set to the string 'https://gw2-forum-3bb633979161.herokuapp.com/' (deployed API URL). This sets the front-end website to make requests to the specifc API built in this project. Additionally, the back end API project on Heroku needs a config var of "Client_ORIGIN" and the value of "https://gw2-forum-3bb633979161.herokuapp.com/" (deployed site URL). This allows the front-end website to make requests to the API.
 
 ## Credits
 
 - Code Institute's Moments project was used to lay the foundations of this project and was adapted on to create a unique project. (https://github.com/Code-Institute-Solutions/moments/tree/bb6657e265fb18360b841e10d9d633dad06f4e5c) 
 
-- My fiance, Emma, for testing my code and giving me that push and confidence to get this over the line
+- My fiance, Emma, for testing my code and giving me that push and confidence to get this over the line.
 
 - My mentor, Gareth, for going through my project and letting me know what I can do to improve things/provide desirable features for my users.
