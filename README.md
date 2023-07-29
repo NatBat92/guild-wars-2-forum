@@ -212,7 +212,7 @@ An agile development strategy was implemented in this project as user stories we
 
 ![comment](src/assets/readme/comment-section.jpg)
 
-![edit comment](src/assets/readme/edit-comment-1.jpg)
+![edit comment](src/assets/readme/commet-dropdown.png)
 
 ![edit comment 2](src/assets/readme/edit-comment-2.jpg)
 
