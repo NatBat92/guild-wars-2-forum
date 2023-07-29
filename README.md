@@ -1,6 +1,6 @@
 # Guild Wars 2 Forum
 
-The Guild Wars 2 Forum is a discussion space to review, share knowledge and discuss for enthusiasts of the Guild Wars franchise. The main goal of this app is to encourage players to talk about their favourite/least favourite things in the game, show off their gear or share thoughts on up coming content.
+The Guild Wars 2 Forum is a discussion space for enthusiasts to review, share knowledge and discuss the Guild Wars franchise. The main goal of this app is to encourage players to talk about their favourite/least favourite things in the game, show off their gear or share thoughts on up coming content.
 
 A community can be created in the future, with the possibility of creating and finding a Guild for you to join while playing the game.
 
@@ -63,7 +63,7 @@ An agile development strategy was implemented in this project as user stories we
 5. As a **logged in user**, I can **view all the most recent posts, ordered by most recently created first so that I am up to date with the newest content**.
 6. As a **logged in user**, I can **search for posts and categories so that I can find specific themes**.
 7. As a **logged in user**, I can **view all the posts by a specific user so that I can catch up on their latest posts, or decide I want to follow them**.
-8. As a **logged in user** I can **view the details of a single post so that I can learn more about it**.
+8. As a **logged in user**, I can **view the details of a single post so that I can learn more about it**.
 
 ### Comments
 
