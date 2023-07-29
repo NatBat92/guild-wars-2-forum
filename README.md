@@ -4,7 +4,7 @@ Guild Wars Forum is a forum/ review app for enthusiasts of the guildwars franchi
 
 A community can be created in the future with the possibility of creating and finding a guild for you to play the game with.
 
-![Image showing the website's responsiveness on different screens]
+![Image showing the website's responsiveness on different screens](src/assets/readme/am-i-reponsive-image.png)
 
 ## Project Links
 
@@ -81,9 +81,9 @@ An agile development strategy was implemented in this project as user stories we
 ### Profile
 
 1. As a **user** I can **sign in to the app so that I can access functionality for logged in users**.
-2. As a **logged user** I can **update my username and password so that I can change my display name and keep my profile secure**.
+2. As a **logged in user** I can **update my username and password so that I can change my display name and keep my profile secure**.
 3. As a **user** I can **see all my uploaded posts**.
-4. As a **logged user** I can **view content filtered by users I follow so that I can keep up to date with what they are posting about**.
+4. As a **logged in user** I can **view content filtered by users I follow so that I can keep up to date with what they are posting about**.
 5. As a **user** I can **view user's avatars so that I can easily identify users of the application**.
 6. As a **user** I can **follow and unfollow other people**.
 7. As a **user** I can **view statistics about a specific user: bio, number of posts, follows and users followed**.
@@ -137,7 +137,6 @@ An agile development strategy was implemented in this project as user stories we
 - Users are able to see their log in avatar in the navbar.
 
 ![profile]
-
 
 ### Sign Up
 
@@ -473,72 +472,162 @@ React components are blocks of code that are reusable throughout an application.
 
 ![css](src/assets/readme/css-tested.jpg)
 
-### Python
-
-- Comments
-
-![py] - Models
-
-![py] - Serializer
-
-![py] - Views
-
-- Likes
-
-![py] - Models
-
-![py] - Serializer
-
-![py] - Views
-
-- Profiles
-
-![py] - Models
-
-![py] - Serializer
-
-![py] - Views
-
-- Favourites
-
-![py] - Models
-
-![py] - Serializer
-
-![py] - Views
-
-- Contact
-
-![py] - Models
-
-![py] - Serializer
-
-![py] - Views
-
-- Posts
-
-![py] - Models
-
-![py] - Serializer
-
-![py] - Views
-
 ### Lighthouse Scores
 
 The site scored fine. Performance different a lot using live site vs incognito vs normal vs dev deployment.
 
-- Main Page
+- Landing Page
 
-![Lighthouse]
+![Lighthouse](src/assets/readme/landing-page-lighthouse.jpg)
 
-- Add Post
+- Home Page
 
-![Lighthouse] 
+![Lighthouse](src/assets/readme/home-page-lighthouse.jpg)
 
-- Favourite
+- Sign In
 
-![Lighthouse]
+![Lighthouse](src/assets/readme/sign-in-lighthouse.jpg)
 
-- Profile
+- Sign Up
 
-![Lighthouse]
+![Lighthouse](src/assets/readme/sign-up-lighthouse.jpg)
+
+### Devices used for manual testing
+
+Site was tested using the following desktops:
+
+- Chrome  
+
+![chrome](src/assets/readme/chrome-tested.jpg)
+
+- Safari 
+
+![safari](src/assets/readme/safari-test.jpg)
+
+- Edge
+
+![edge](src/assets/readme/edge-tested.jpg)
+
+- Samsung Internet
+
+![Samsung](src/assets/readme/samsung-test.jpg)
+
+### Bugs
+
+### Remaining Bugs
+
+- Bug on IOS and android mobile devices, turn off ‘prevent cross site tracking’ in iOS/ samsung internet settings is the only way to make the website works on iphones/iPads/ android devices.
+
+## Technologies Used
+
+### Languages and Frameworks Used
+
+- HTML
+
+- JavaScript
+
+- React
+
+### Dependencies and Programs Used
+
+- ReactJS - Used to build the components making up the front end website.
+
+- React Bootstrap - Used to create layouts and styles on the front end website.
+
+- Axios - Used to make HTTP requests from the front end website to the API.
+
+- JWT-Decode - Used to extract information from JWTs.
+
+- React-Infinte-Scroll - Used to automatically load more data from API when a user scrolls down a page.
+
+- Google Fonts - Used to provide a custom font on the website.
+
+- Font Awesome - Used to add custom icons on the website.
+
+- Gitpod - Used as an IDE to build the project.
+
+- GitHub - Used to store the project in a repository. Used as an agile tool.
+
+- Free logo design - used to create logo.
+
+- Freepik - used to add picture to the profiles.
+
+- Heroku - Used to deploy and host the project.
+
+### Run Locally
+
+Note that the API will also have to configured to allow access to local hosts.
+
+- Manually Downloading the Repository:
+
+    - Opening the project repository at: https://github.com/NatBat92/guild-wars-2-forum
+
+    - Opening the dropdown on the 'code' button.
+
+    - Downloading the zip file.
+
+    - Extracting the files from the zip file into a new folder on your computer.
+
+    - Opening the folder in an IDE of your choice.
+
+    - Updating the the "start" script value to "react-scripts --openssl-legacy-provider start".
+
+    - running "npm install" in the terminal.
+
+    - running "npm start" in the terminal.
+
+- Cloning the Repository:
+
+    - Opening the project repository at: https://github.com/NatBat92/guild-wars-2-forum
+
+    - Opening the dropdown on the 'code' button.
+
+    - Copying the link under the HTTPS heading (https://github.com/NatBat92/guild-wars-2-forum.git).
+
+    - Opening an IDE of your choice (must have Git support or relevant git extension).
+
+    - Open the terminal and create a directory to store the repository.
+
+    - Type "git clone https://github.com/NatBat92/guild-wars-2-forum.git" and press enter in the terminal.
+
+    - Updating the the "start" script value to "react-scripts --openssl-legacy-provider start".
+
+    - running "npm install" in the terminal.
+
+    - running "npm start" in the terminal.
+ 
+### Deploying to Heroku
+
+During the development of the project, version control was used by committing and pushing the code to GitHub. The GitHub repository can be found here: https://github.com/NatBat92/guild-wars-2-forum
+
+This project was deployed to Heroku by:
+
+- Committing and pushing the code to GitHub.
+
+- Logging in to your Heroku account at Heroku.com.
+
+- On the Heroku website, clicking 'New' and then 'Create New App'.
+
+- Setting the name and region and pressing 'Create App'.
+
+- Clicking the 'Deploy' tab.
+
+- Clicking 'Connect to GitHub', search for repository, click 'Connect'.
+
+- Enabling Manual Deploy. Check for successful message.
+
+- Enabling Automatic Deploys.
+
+- The live site can be found here: https://gw2-forum-3bb633979161.herokuapp.com/
+
+### Connecting to the API
+
+In axiosDefaults.js, the "axios.defaults.baseURL" variable needs to be set to the string 'https://gw2-forum-3bb633979161.herokuapp.com/' (deployed API URL). This sets the front end website to make requests to the specifc API built in this project. Additionally, the backend API project on Heroku needs a config var of "Client_ORIGIN" and the value of "https://gw2-forum-3bb633979161.herokuapp.com/" (deployed site URL). This allows the front end website to make requests to the API.
+
+## Credits
+
+- Code Institute's Moments project was used to lay the foundations of this project and was adapted on to create a unique project. (https://github.com/Code-Institute-Solutions/moments/tree/bb6657e265fb18360b841e10d9d633dad06f4e5c) 
+
+- My fiance, Emma, for testing my code and giving me that push and confidence to get this over the line
+
+- My mentor, Gareth, for going through my project and letting me know what I can do to improve things/provide desirable features for my users.

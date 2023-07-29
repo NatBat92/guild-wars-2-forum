@@ -4,6 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
+import SignUpImage from "../../assets/Guild-Wars-2-commander.jpg"
 
 import {
   Form,
@@ -131,7 +132,7 @@ const SignUpForm = () => {
       >
         <Image
           className={`${appStyles.FillerImage}`}
-          src={"https://codeinstitute.s3.amazonaws.com/AdvancedReact/hero2.jpg"}
+          src={SignUpImage}
         />
       </Col>
     </Row>
